@@ -1,0 +1,32 @@
+.grid-container{
+    display: grid;
+    grid-template-areas:'header header header header header header'
+    'menu main main main direito direito'
+    'menu footer footer footer footer footer';
+    gap: 10px;
+    background-color: rgb(101, 101, 145);
+    padding:10px;
+    
+}
+
+.grid-item{
+    background-color: rgb(163, 163, 247);
+    text-align:center;
+    padding:20px 0;
+    font-size: 30px;
+}
+.item1{
+    grid-area: header;
+}
+.item2{
+    grid-area: menu;
+}
+.item3{
+    grid-area: main;
+}
+.item4{
+    grid-area: direito;
+}
+.item5{
+    grid-area:footer;
+}

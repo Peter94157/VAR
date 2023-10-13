@@ -1,0 +1,59 @@
+body{
+    background-color: #ccc;
+}
+.grid-container-home{
+    display: grid;
+    grid-template-areas:'port port port foto foto '
+    'nome nome nome foto foto '
+    'profissao profissao email foto foto';
+    gap: 10px;
+    padding: 10px;
+}
+.grid-container-about{
+    display:grid;
+    grid-template-areas:'bio bio tema tema'
+    'foto foto sobre sobre';
+    gap: 10px;
+    padding: 10px;
+
+}
+.gridItem{
+    background-color: white;
+    text-align:center;
+    padding: 20px 0;
+}
+.grid-About{
+    background-color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.item1{
+    grid-area: port;
+}
+.item2{
+    grid-area:nome ;
+}
+.item3{
+    grid-area:email ;
+    padding: 40px 0;
+}
+.item4{
+    grid-area:profissao ;
+}
+.item5{
+    grid-area: foto ;
+}
+
+.about1{
+    grid-area:bio;
+}
+.about2{
+    grid-area:tema;
+}
+.about3{
+    grid-area:foto;
+}
+.about4{
+    grid-area:sobre;
+}
