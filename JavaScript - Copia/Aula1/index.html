@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu sistema</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        h1 {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Meu primeiro sistema</h1>
+    <p style="background-color: red;color: white;font-size: 36px;" id="paragrafo1">Teste de texto no sistema</p>
+    <br>
+    <h1 id="h1teste">Testando o csss</h1>
+    <button onclick="alterarTexto()">testando javaScript</button>
+    <button onclick="alertaPadrao('Testando Funções com paramètros')">teste 2 de javaScript</button>
+    <button onclick="Somar()">Somar variaveis</button>
+
+    <br><br>
+    <label for="">digite o primeiro numero</label>
+    <input id="input1" type="number"><br><br>
+    <label for="">digite o segundo numero</label>
+    <input id="input2" type="number"><br><br>
+    <button onclick="calculadora('Somar')">Somar</button>
+    <button onclick="calculadora('Subtrair')">Subtrair variaveis</button>
+    <button onclick="calculadora('Multiplicar')">Multiplicação</button>
+    <button onclick="calculadora('Dividir')">Divisão</button>
+    <h1>----------------------------------------------------------------------------------------------------------------------------------------------
+    </h1>
+    <br><br><br><br>
+    <div class="calculadora">
+        <div><button>9</button></div>
+        <div><button>8</button></div>
+        <div><button>7</button></div>
+        <div><button>+</button></div>
+        <div><button>6</button></div>
+        <div><button>5</button></div>
+        <div><button>4</button></div>
+        <div><button>-</button></div>
+        <div><button>3</button></div>
+        <div><button>2</button></div>
+        <div><button>1</button></div>
+        <div><button>*</button></div>
+        <div><button>0</button></div>
+    </div>
+
+
+
+
+    <script>
+        function alterarTexto() {
+            document.getElementById('paragrafo1').innerHTML = Date()
+        }
+        function alertaPadrao(textoExibicao) {
+            alert(textoExibicao)
+            document.getElementById('paragrafo1').innerHTML = textoExibicao;
+            textoExibicao = textoExibicao + " alterei o valor"
+            document.getElementById('h1teste').innerHTML = textoExibicao;
+        }
+        function Somar() {
+            var valor1 = 5;
+            var valor2 = 2;
+            var resultado = valor1 + valor2;
+
+
+            if (resultado === 10) {
+                alert('Passou de fase')
+            } else {
+                alert('Voce repetiu de ano')
+            }
+
+        }
+        function calculadora(operacaoq) {
+
+            var valor1 = parseInt(document.getElementById('input1').value)
+            var valor2 = parseInt(document.getElementById('input2').value)
+            var resultado = 0
+            if (operacaoq == "Somar") {
+                resultado = valor1 + valor2;
+                resultado = 'A soma entre ' + valor1 + ' e ' + valor2 + ' é ' + resultado
+                alert(resultado)
+            } else if (operacaoq == "Subtrair") {
+                resultado = valor1 - valor2;
+                resultado = 'A subtração entre ' + valor1 + ' e ' + valor2 + ' é ' + resultado
+                alert(resultado)
+            } else if (operacaoq == "Multiplicar") {
+                resultado = valor1 * valor2
+                resultado = 'A multiplicação entre ' + valor1 + ' e ' + valor2 + ' é ' + resultado
+                alert(resultado)
+            } else if (operacaoq == 'Dividir') {
+                resultado = valor1 / valor2
+                resultado = 'A divisão entre ' + valor1 + ' e ' + valor2 + ' é ' + resultado
+                alert(resultado)
+            }
+
+        }
+
+    </script>
+</body>
+
+</html>
